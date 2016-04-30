@@ -6,6 +6,10 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.*;
+
 import butterknife.ButterKnife;
 import rx.Observable;
 import rx.Observer;
@@ -53,10 +57,13 @@ public class MainActivity extends AppCompatActivity {
 
         mySubscription = mObservable.subscribe(mObserver);
         Button btnLambda = (Button) findViewById(R.id.btn_main);
-        btnLambda.setOnClickListener(i-> Toast.makeText(this, "Hello",  Toast.LENGTH_LONG).show());
-
+        assert btnLambda != null;
+        btnLambda.setOnClickListener((i)-> Toast.makeText(this, "Hello",  Toast.LENGTH_LONG).show());
 
         runner.run(()-> Log.d("Single Line ","Java8"));
+
+
+
 
 
     }
@@ -71,5 +78,10 @@ public class MainActivity extends AppCompatActivity {
 
         //http://code.tutsplus.com/tutorials/getting-started-with-reactivex-on-android--cms-24387
         //http://www.andreamaglie.com/rxjava-android-where-to-start/
+
+        //https://www.youtube.com/watch?v=Gsfmfeb2XW8
+
+        //https://www.parleys.com/search/android/PRESENTATIONS
     }
+
 }
