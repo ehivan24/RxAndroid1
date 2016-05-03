@@ -122,6 +122,8 @@ public class MainActivity extends AppCompatActivity {
 
                 showUsers.setText(Arrays.toString(newList.toArray()).replaceAll("\\[|\\]", "").replaceAll(", ","\n"));
 
+        Observable.just("Hello, world!")
+                .subscribe(s -> System.out.println(s));
 
 
 
