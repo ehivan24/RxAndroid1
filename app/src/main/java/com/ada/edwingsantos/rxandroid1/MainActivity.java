@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
 
         Observable.just("Hello, world!")
                 .subscribe(s -> System.out.println(s));
-
+        //http://blog.danlew.net/2014/09/15/grokking-rxjava-part-1/
 
 
     }
