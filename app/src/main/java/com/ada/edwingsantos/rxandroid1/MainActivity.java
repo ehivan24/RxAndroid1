@@ -116,8 +116,8 @@ public class MainActivity extends AppCompatActivity {
         users.add(user);
 
         List<User> newList = Stream.of(users)
-                //.filter(s -> s.getName().startsWith("M"))
-                .filter(s -> s.getGender() == User.SEX.MALE && s.getAge() < 35 )
+                .filter(s -> s.getName().startsWith("M"))
+                //.filter(s -> s.getGender() == User.SEX.MALE && s.getAge() < 35 )
                 .collect(Collectors.toList());
 
                 showUsers.setText(Arrays.toString(newList.toArray()).replaceAll("\\[|\\]", "").replaceAll(", ","\n"));
